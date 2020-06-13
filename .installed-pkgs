@@ -10,6 +10,7 @@ bash
 binutils
 bison
 bluez-libs
+bspwm
 bzip2
 ca-certificates
 ca-certificates-mozilla
@@ -55,6 +56,7 @@ gzip
 hwids
 iana-etc
 icu
+inetutils
 iproute2
 iptables
 iputils
@@ -78,6 +80,7 @@ libelf
 libffi
 libgcrypt
 libgpg-error
+libice
 libidn2
 libksba
 libldap
@@ -100,6 +103,7 @@ libpsl
 libsasl
 libseccomp
 libsecret
+libsm
 libsodium
 libssh2
 libtasn1
@@ -109,7 +113,14 @@ libtool
 libunistring
 libusb
 libutil-linux
+libx11
+libxau
+libxcb
+libxdmcp
+libxext
 libxml2
+libxmu
+libxt
 licenses
 linux
 linux-api-headers
@@ -167,6 +178,15 @@ vim
 vim-runtime
 which
 wpa_supplicant
+xcb-proto
+xcb-util
+xcb-util-keysyms
+xcb-util-wm
+xorg-xauth
+xorg-xinit
+xorg-xmodmap
+xorg-xrdb
+xorgproto
 xz
 yay-bin
 zeromq
