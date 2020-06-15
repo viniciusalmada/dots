@@ -207,6 +207,7 @@ libxss
 libxt
 libxtst
 libxv
+libxvmc
 libxxf86vm
 licenses
 linux
@@ -298,6 +299,7 @@ xcb-util-renderutil
 xcb-util-wm
 xcb-util-xrm
 xf86-input-libinput
+xf86-video-intel
 xf86-video-vesa
 xkeyboard-config
 xorg-bdftopcf
