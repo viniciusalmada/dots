@@ -177,6 +177,10 @@ libunistring
 libunwind
 libusb
 libutil-linux
+libva
+libva-intel-driver
+libva-utils
+libvdpau
 libvorbis
 libwacom
 libx11
@@ -232,6 +236,7 @@ nerd-fonts-roboto-mono
 nettle
 networkmanager
 networkmanager-dispatcher-sshd
+noto-fonts-emoji
 npth
 nspr
 nss
@@ -284,8 +289,10 @@ ttf-roboto
 ttf-roboto-mono
 tzdata
 util-linux
+vdpauinfo
 vim
 vim-runtime
+vulkan-intel
 wayland
 wayland-protocols
 which
