@@ -297,6 +297,7 @@ wayland
 wayland-protocols
 which
 wpa_supplicant
+xbindkeys
 xcb-proto
 xcb-util
 xcb-util-cursor
