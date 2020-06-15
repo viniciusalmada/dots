@@ -80,6 +80,7 @@ gtk2
 gtk3
 guile
 gzip
+hardinfo
 harfbuzz
 hicolor-icon-theme
 hwids
@@ -368,6 +369,7 @@ xorgproto
 xz
 yajl
 yay-bin
+ytop-bin
 zeromq
 zlib
 zsh
