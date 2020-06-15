@@ -298,6 +298,7 @@ xcb-util-keysyms
 xcb-util-renderutil
 xcb-util-wm
 xcb-util-xrm
+xclip
 xdg-user-dirs
 xf86-input-libinput
 xf86-video-intel
