@@ -34,8 +34,8 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 0
-    y: 0
+    x: 4
+    y: 4
 
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: true
@@ -136,7 +136,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 07.0
+  size: 06.50
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -170,36 +170,39 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: true
 
-# Colors (iTerm 2 default theme)
+
+# Colors (Gruvbox dark)
 colors:
   # Default colors
   primary:
-    background: '#101421'
-    foreground: '#fffbf6'
+    # hard contrast: background = '#1d2021'
+    background: '#282828'
+    # soft contrast: background = '#32302f'
+    foreground: '#ebdbb2'
 
- # Normal colors
+  # Normal colors
   normal:
-    black:   '#2e2e2e'
-    red:     '#eb4129'
-    green:   '#abe047'
-    yellow:  '#f6c744'
-    blue:    '#47a0f3'
-    magenta: '#7b5cb0'
-    cyan:    '#64dbed'
-    white:   '#e5e9f0'
+    black:   '#282828'
+    red:     '#cc241d'
+    green:   '#98971a'
+    yellow:  '#d79921'
+    blue:    '#458588'
+    magenta: '#b16286'
+    cyan:    '#689d6a'
+    white:   '#a89984'
 
- # Bright colors
+  # Bright colors
   bright:
-    black:   '#565656'
-    red:     '#ec5357'
-    green:   '#c0e17d'
-    yellow:  '#f9da6a'
-    blue:    '#49a4f8'
-    magenta: '#a47de9'
-    cyan:    '#99faf2'
-    white:   '#ffffff'
+    black:   '#928374'
+    red:     '#fb4934'
+    green:   '#b8bb26'
+    yellow:  '#fabd2f'
+    blue:    '#83a598'
+    magenta: '#d3869b'
+    cyan:    '#8ec07c'
+    white:   '#ebdbb2'
 
- # Dim colors
+# Dim colors
   #
   # If the dim colors are not set, they will be calculated automatically based
   # on the `normal` colors.
@@ -253,7 +256,7 @@ colors:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.95
+background_opacity: 1.00
 
 selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
