@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 import subprocess
+import blocks
 from string import Template
 
-user = subprocess.run('echo "Vinicius Almada"',shell=True, capture_output=True, text=True).stdout
+user = subprocess.run('echo "Vinicius"',shell=True, capture_output=True, text=True).stdout.strip()
 
-span_text = Template('<span foreground="$color" weight="medium">$text</span>')
+fgColor = blocks.textBgColor
+bgColor = blocks.colorUser
+span = blocks.span
 
-color = 'white'
-
-print(span_text.substitute(color=color, text=user.strip()),' ')
+print(span.substitute(fgIc=fgColor, icon='  ', bgIc=bgColor, fgTx=bgColor, bgTx=fgColor, text=' ' + user + ' '))

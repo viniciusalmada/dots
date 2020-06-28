@@ -2,7 +2,7 @@
 import subprocess
 from string import Template
 
-cpu_temp = float(subprocess.run('/bin/cat /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input',shell=True, capture_output=True, text=True).stdout) / 1000
+cpu_temp = float(subprocess.run('/bin/cat /sys/devices/platform/coretemp.0/hwmon/hwmon*/temp1_input',shell=True, capture_output=True, text=True).stdout) / 1000
 
 span_icon = Template('<span foreground="$color" size="large">$icon</span>')
 span_text = Template('<span foreground="$color">$text°C</span>')

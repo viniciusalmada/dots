@@ -1,20 +1,32 @@
-separator=true
-separator_block_width=24
+separator=false
+separator_block_width=18
 
-[fan-speed]
-command=~/.config/i3blocks/fan.py
-interval=1
+#[fan-speed]
+#command=~/.config/i3blocks/fan.py
+#interval=1
+#markup=pango
+
+[caps]
+command=~/.config/i3blocks/caps.py
+interval=once
 markup=pango
+signal=10
+
+[brightness]
+command=~/.config/i3blocks/brightness.py
+interval=once
+markup=pango
+signal=11
 
 [cpu-clock]
 command=~/.config/i3blocks/cpu_speed.py
 interval=1
 markup=pango
 
-[cpu-temp]
-command=~/.config/i3blocks/cpu_temp.py
-interval=1
-markup=pango
+#[cpu-temp]
+#command=~/.config/i3blocks/cpu_temp.py
+#interval=1
+#markup=pango
 
 [memory]
 command=~/.config/i3blocks/memory.py
