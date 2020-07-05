@@ -1,11 +1,11 @@
 # blocks with global variable
 # colors
 textBgColor = "#282828"
-colorMemory = "#689d6a"
-colorBrightness = "#689d6a"
-colorCPU = "#689d6a"
-colorTime = "#689d6a"
-colorUser = "#689d6a"
+colorMemory = "#98971a"
+colorBrightness = "#98971a"
+colorCPU = "#98971a"
+colorTime = "#98971a"
+colorUser = "#98971a"
 #colorBrightness = "#98971a"
 #colorCPU = "#458588"
 #colorTime = "#b16286"

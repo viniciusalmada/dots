@@ -6,11 +6,11 @@ separator_block_width=18
 #interval=1
 #markup=pango
 
-[caps]
-command=~/.config/i3blocks/caps.py
-interval=once
-markup=pango
-signal=10
+#[caps]
+#command=~/.config/i3blocks/caps.py
+#interval=once
+#markup=pango
+#signal=10
 
 [brightness]
 command=~/.config/i3blocks/brightness.py
@@ -23,10 +23,10 @@ command=~/.config/i3blocks/cpu_speed.py
 interval=1
 markup=pango
 
-#[cpu-temp]
-#command=~/.config/i3blocks/cpu_temp.py
-#interval=1
-#markup=pango
+[cpu-temp]
+command=~/.config/i3blocks/cpu_temp.py
+interval=1
+markup=pango
 
 [memory]
 command=~/.config/i3blocks/memory.py
@@ -36,6 +36,11 @@ markup=pango
 [calendar]
 command=~/.config/i3blocks/time.py
 interval=1
+markup=pango
+
+[battery]
+command=~/.config/i3blocks/battery.py
+interval=2
 markup=pango
 
 [user]
