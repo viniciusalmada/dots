@@ -19,7 +19,7 @@ set mouse=nv
 set tabstop=4
 "set autoindent
 set shiftwidth=4
-set expandtab
+"set expandtab
 
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
@@ -30,17 +30,14 @@ call plug#begin()
 " Lightline status line
 Plug 'itchyny/lightline.vim'
 
-" Fzf
-Plug '/usr/bin/fzf'
-Plug 'junegunn/fzf.vim'
-nnoremap <C-p> :Files<CR>
-nnoremap <C-o> :Buffers<CR>
-nnoremap <C-g> :GFiles<CR>
-nnoremap <C-r> :Rg! 
-nnoremap U :redo<CR>
-
 " Toml language support
 Plug 'cespare/vim-toml'
 
+" Completor
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'maralla/completor.vim'
+
+" Python jedi
+Plug 'davidhalter/jedi-vim'
+
 call plug#end()
