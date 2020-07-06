@@ -68,7 +68,7 @@ ZSH_THEME="rkj-repos"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git archlinux)
+plugins=(git archlinux asdf) 
 
 source $ZSH/oh-my-zsh.sh
 
@@ -108,3 +108,4 @@ alias rm='rm -i'
 
 
 
+. /home/vinicius/.asdf/asdf.sh
