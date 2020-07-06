@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME/ add $1
+git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME/ commit -m "$2"
