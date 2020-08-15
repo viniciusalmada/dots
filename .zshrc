@@ -109,3 +109,4 @@ alias rm='rm -i'
 
 
 . /home/vinicius/.asdf/asdf.sh
+. ~/.asdf/plugins/java/set-java-home.zsh
