@@ -8,7 +8,7 @@ export ZSH="/home/vinicius/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="rkj-repos"
+ZSH_THEME="macovsky"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -107,6 +107,6 @@ alias cat='bat'
 alias rm='rm -i'
 
 
-
 . /home/vinicius/.asdf/asdf.sh
 . ~/.asdf/plugins/java/set-java-home.zsh
+ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
