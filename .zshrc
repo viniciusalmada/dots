@@ -1,45 +1,58 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$HOME/.cargo/env:$PATH
+export PATH=$HOME/Scripts:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# Oh my Zsh theme 
 ZSH_THEME="pmcgee"
 
-# Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
-
 # Which plugins would you like to load?
-plugins=(
-	git
-	debian
-)
+plugins=(git archlinux)
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.cargo/env
 
 # User configuration
 
-export EDITOR='vim'
+export EDITOR='nvim'
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-alias update="sudo apt autoremove -y && sudo apt update && sudo apt upgrade -y"
-alias install="sudo apt install"
-alias search="sudo apt search"
-
-alias please="sudo"
-alias fixapt="sudo apt install -f"
-alias cat="batcat"
+alias update="yay -Syu"
+alias install="yay -S"
+alias cat="bat"
 alias ccat="/bin/cat"
 alias adog="git log --all --decorate --oneline --graph"
 alias tmp="cd /tmp"
+alias vim="nvim"
+alias v="nvim"
+alias pac="sudo pacman"
+
+alias pro="cd ~/Projects"
+alias scr="cd ~/Scripts"
+
+alias sz="source ~/.zshrc"
 
 # Allow wildcard
 setopt nonomatch
+# Disable autocorrect
+unsetopt correct_all
 
 neofetch
+
+if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+  exec startx
+fi
+
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+    ssh-agent -t 1h > "$XDG_RUNTIME_DIR/ssh-agent.env"
+fi
+if [[ ! "$SSH_AUTH_SOCK" ]]; then
+    source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
+fi
+
+precmd() { pwd > /tmp/whereami }
+if [[ -f /tmp/whereami ]]; then
+	cd $(cat /tmp/whereami)
+fi
