@@ -28,8 +28,7 @@ alias tmp="cd /tmp"
 alias vim="nvim"
 alias v="nvim"
 alias pac="sudo pacman"
-alias lsp="ls -l | awk '{k=0;for(i=0;i<=8;i++)k+=((substr($1,i+2,1)~/[rwx]/) \
-             *2^(8-i));if(k)printf("%0o ",k);print}'"
+alias lsp="ls -l | awk '{k=0;for(i=0;i<=8;i++)k+=((substr($1,i+2,1)~/[rwx]/)*2^(8-i));if(k)printf("%0o ",k);print}'"
 
 alias pro="cd ~/Projects"
 alias scr="cd ~/Scripts"
