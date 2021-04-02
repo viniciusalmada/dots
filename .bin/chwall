@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-feh --bg-scale $1
-cp $1 ~/.wallpaper
