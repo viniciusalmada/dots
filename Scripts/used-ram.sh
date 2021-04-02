@@ -12,8 +12,3 @@ PERC=`perl -E "say 100*$USED/$TOTAL"`
 OUT=`echo $USED $PERC | awk '{ printf "%1.1f GB %1.1f%%", $1, $2 }'`
 
 echo "&#xf538; <span color='#fff'>$OUT</span>"
-
-#echo "$OUT"
-#echo "$OUT"
-#echo "#FFFFFF"
-#echo "#282828"
