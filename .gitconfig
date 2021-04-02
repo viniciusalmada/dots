@@ -1,0 +1,9 @@
+[pull]
+	rebase = false
+[user]
+	name = vinicius
+	email = viniciusalmada10@gmail.com
+[init]
+	defaultBranch = main
+[core]
+	autocrlf = input
