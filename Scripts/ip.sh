@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
+source $HOME/Scripts/env-functions.sh
 
-IP=`ip route get 1.2.3.4 | awk '{print $7}'`
+IP=$(get_local_ip)
 
-echo "&#xf1eb; <span color='#fff'>$IP</span>"
+echo $(generate_pango_output "&#xf1eb;" "IP $IP")
 

@@ -1,7 +1,7 @@
-#!/usr/bin/env bash
+source $HOME/Scripts/env-functions.sh
 
-USED=`free --mega | grep "Mem:" | awk '{ print $3 }'`
-TOTAL=`free --mega | grep "Mem:" | awk '{ print $2 }'`
+USED=$(get_used_memory)
+TOTAL=$(get_total_memory)
 
 # Convert to Gigabytes
 USED=`perl -E "say $USED/1024.0"`
@@ -9,6 +9,7 @@ TOTAL=`perl -E "say $TOTAL/1024.0"`
 
 PERC=`perl -E "say 100*$USED/$TOTAL"`
 
-OUT=`echo $USED $PERC | awk '{ printf "%1.1f GB %1.1f%%", $1, $2 }'`
+OUT=`echo $USED $PERC | \
+	awk '{ printf "RAM %1.1f%% %2.1f GB", $2, $1 }'`
 
-echo "&#xf538; <span color='#fff'>$OUT</span>"
+echo $(generate_pango_output "&#xf538;" "$OUT")

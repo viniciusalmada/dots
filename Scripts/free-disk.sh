@@ -1,10 +1,10 @@
-#!/usr/bin/env bash
+source $HOME/Scripts/env-functions.sh
 
-USED=`df -h . | grep dev | awk '{ print $3 }'`
-PERC=`df -h . | grep dev | awk '{ print $5 }'`
+USED=$(get_used_disk)
+PERC=$(get_perc_used_disk)
 
-USED_G=`perl -E "say $USED/1024.0/1024.0"`
+OUT=`echo $USED $PERC | \
+	awk '{ printf "STG %s %1.2f GB", $2, $1 }'`
 
-OUT=`echo $USED_G $PERC | awk '{ printf "%1.2f GB %s", $1, $2 }'`
+echo $(generate_pango_output "&#xf7c2;" "$OUT")
 
-echo "&#xf7c2; <span color='#fff'>$OUT</span>"

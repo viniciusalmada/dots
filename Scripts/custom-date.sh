@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
+source $HOME/Scripts/env-functions.sh
 
-D=`date '+%a %b %d, %H:%M'`
+D=`date '+%a %B %d, %I:%M %p'`
 
-echo "&#xf073; <span color='#fff'>$D</span>"
+echo $(generate_pango_output "&#xf073;" "$D")
 

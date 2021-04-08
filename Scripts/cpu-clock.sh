@@ -1,8 +1,14 @@
-#!/usr/bin/env bash
+source $HOME/Scripts/env-functions.sh
 
-CL=`lscpu | grep "CPU MHz" | awk {'print $3'}`
-#TMP=`sensors | grep "Core 0" | awk {'print substr($3,2)'} `
+CPU_CLOCK=$(get_cpu_clock)
+CPU_MAX_CLOCK=$(get_cpu_max_clock)
+PERC_CLOCK=`perl -E "say 100*$CPU_CLOCK/$CPU_MAX_CLOCK"`
 
-OUT=`echo $CL | awk '{ printf "%4.0f MHz", $1  }'`
+if [[ $PERC_CLOCK -eq 100 ]]; then
+	PERC_CLOCK=0
+fi
 
-echo "&#xf2db; <span color='#fff'>$OUT</span>"
+OUT=`echo $PERC_CLOCK $CPU_CLOCK | \
+	awk '{ printf "CPU %.2d%% %4.0f MHz", $1, $2 }'`
+
+echo $(generate_pango_output "&#xf2db;" "$OUT")
