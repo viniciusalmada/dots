@@ -30,23 +30,12 @@ interval=30
 markup=pango
 
 [battery-plus]
-command=$HOME/Scripts/battery-plus
+command=$HOME/Scripts/battery.sh
 interval=30
 markup=pango
-_COLOR_DISCHARGING=white
-_COLOR_FULLY_CHARGED=white
-_COLOR_CHARGING=white
-_COLOR_DISCHARGING=white
-_COLOR_PENDING=white
-_COLOR_ERROR=white
-_COLOR_BATTERY=white
-_COLOR_ALERT=white
-_COLOR_DIRECTIONAL_UP=white
-_COLOR_DIRECTIONAL_DOWN=white
-_COLOR_GRADIENT_START=#FFFFFF
-_COLOR_GRADIENT_END=#FFFFFF
 
 [time]
 command=$HOME/Scripts/custom-date.sh
 interval=1
 markup=pango
+
