@@ -36,6 +36,8 @@ alias scr="cd ~/Scripts"
 
 alias sz="source ~/.zshrc"
 
+alias dots="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+
 # Allow wildcard
 setopt nonomatch
 # Disable autocorrect
@@ -48,7 +50,7 @@ if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
 fi
 
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
-    ssh-agent -t 1h > "$XDG_RUNTIME_DIR/ssh-agent.env"
+    ssh-agent -t 8h > "$XDG_RUNTIME_DIR/ssh-agent.env"
 fi
 if [[ ! "$SSH_AUTH_SOCK" ]]; then
     source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
