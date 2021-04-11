@@ -196,6 +196,7 @@ bindsym $mod+r mode "resize"
 bar {
   tray_output none
   status_command i3blocks
+  font pango: Roboto, Font Awesome 5 Free
   bindsym button1 exec --no-startup-id "rofi -combi-modi window,run,drun,ssh -theme gruvbox-dark -font \\"Roboto 18\\" -show drun -icon-theme \\"Papirus\\" -show-icons -lines 5"
   colors {
     separator #928374
