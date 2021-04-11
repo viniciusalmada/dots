@@ -2,6 +2,10 @@ source $HOME/Scripts/env-functions.sh
 
 BAT=$(get_battery_level)
 
+if [[ "$BAT" == "0.0" ]]; then
+	exit 1
+fi
+
 CHARGING=$(is_battery_charging)
 
 SIGNAL=""
