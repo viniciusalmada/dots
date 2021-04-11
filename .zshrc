@@ -56,5 +56,5 @@ fi
 
 precmd() { pwd > /tmp/whereami }
 if [[ -f /tmp/whereami ]]; then
-	cd $(cat /tmp/whereami)
+	cd "$(cat /tmp/whereami)"
 fi
