@@ -63,6 +63,11 @@ set inccommand=split
 set noshowmode
 set laststatus=2
 
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set smartindent
+
 let g:lightline = { 'colorscheme': 'darcula' }
 
 " Set leader key to be space key
