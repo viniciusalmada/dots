@@ -3,9 +3,10 @@
 generate_pango_output() {
 	echo \
 		"<span \
-			foreground='#282828' \
-			background='$3'> $1 \
-		</span><span \
+			background='#ebdbb2' \
+			foreground='$3'> $1 \
+		</span> \
+    <span \
 			font_desc='Roboto Bold' \
 			foreground='#282828' \
 			background='$3'> $2\
@@ -76,7 +77,7 @@ generate_monitor() {
 	case "$1" in
 		"IP")
 			IP=$(get_local_ip)
-			echo $(generate_pango_output "&#xf1eb;" "IP $IP" $ip_color)
+			echo $(generate_pango_output "&#xf1eb; IP " "$IP" $ip_color)
       ;;
     "CPU")
 			CPU_CLOCK=$(get_cpu_clock)
@@ -86,8 +87,8 @@ generate_monitor() {
 				PERC_CLOCK=0
 			fi
 			OUT=`echo $PERC_CLOCK $CPU_CLOCK | \
-				awk '{ printf "CPU %.2d%% %4.0f MHz", $1, $2 }'`
-			echo $(generate_pango_output "&#xf2db;" "$OUT" $cpu_color)
+				awk '{ printf " %.2d%% %4.0f MHz", $1, $2 }'`
+			echo $(generate_pango_output "&#xf2db; CPU" "$OUT" $cpu_color)
 			;;
 		"RAM")
 			USED=$(get_used_memory)
@@ -96,19 +97,19 @@ generate_monitor() {
 			TOTAL=`perl -E "say $TOTAL/1024.0"`
 			PERC=`perl -E "say 100*$USED/$TOTAL"`
 			OUT=`echo $USED $PERC | \
-				awk '{ printf "RAM %1.1f%% %2.1f GB", $2, $1 }'`
-			echo $(generate_pango_output "&#xf538;" "$OUT" $ram_color)
+				awk '{ printf "%1.1f%% %2.1f GB", $2, $1 }'`
+			echo $(generate_pango_output "&#xf538; RAM" "$OUT" $ram_color)
 			;;
     "STG")
       USED=$(get_used_disk)
       PERC=$(get_perc_used_disk)
       OUT=`echo $USED $PERC | \
-	      awk '{ printf "STG %s %1.2f GB", $2, $1 }'`
-      echo $(generate_pango_output "&#xf7c2;" "$OUT" $stg_color)
+	      awk '{ printf "%s %1.2f GB", $2, $1 }'`
+      echo $(generate_pango_output "&#xf7c2; STG" "$OUT" $stg_color)
       ;;
     "DATE")
       D=`date '+%a %B %d, %I:%M %p'`
-      echo $(generate_pango_output "&#xf073;" "$D" $date_color)
+      echo $(generate_pango_output "&#xf073; DATE" "$D" $date_color)
       ;;
     "BAT")
       BAT=$(get_battery_level)
@@ -133,7 +134,7 @@ generate_monitor() {
         BAT_ICON="&#xf240;" # battery 75 to 100
       fi
       
-      echo $(generate_pango_output "$BAT_ICON" "BAT $BAT% $SIGNAL" $bat_color) 
+      echo $(generate_pango_output "$BAT_ICON BAT" "$BAT% $SIGNAL" $bat_color) 
       ;;
 		*)
 			echo "Nothing"
