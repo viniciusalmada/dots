@@ -6,36 +6,32 @@ separator=false
 separator_block_width=20
 
 [ip]
-command=$HOME/Scripts/ip.sh
+command=$HOME/Scripts/env-functions.sh 'IP'
 interval=150
 markup=pango
 
 [cpu-clock]
-command=$HOME/Scripts/cpu-clock.sh
+command=$HOME/Scripts/env-functions.sh 'CPU'
 interval=1
 markup=pango
 
-#[gpu-clock]
-#command=$HOME/Scripts/gpu-clock.sh
-#interval=1
-
 [ram]
-command=$HOME/Scripts/used-ram.sh
+command=$HOME/Scripts/env-functions.sh 'RAM'
 interval=5
 markup=pango
 
 [disk]
-command=$HOME/Scripts/free-disk.sh
+command=$HOME/Scripts/env-functions.sh 'STG'
 interval=30
 markup=pango
 
 [battery-plus]
-command=$HOME/Scripts/battery.sh
+command=$HOME/Scripts/env-functions.sh 'BAT'
 interval=30
 markup=pango
 
 [time]
-command=$HOME/Scripts/custom-date.sh
+command=$HOME/Scripts/env-functions.sh 'DATE'
 interval=1
 markup=pango
 
