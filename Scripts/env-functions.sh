@@ -133,7 +133,7 @@ generate_monitor() {
         BAT_ICON="&#xf240;" # battery 75 to 100
       fi
       
-      echo $(generate_pango_output "$BAT_ICON" "BAT $BAT% $SIGNAL" ) 
+      echo $(generate_pango_output "$BAT_ICON" "BAT $BAT% $SIGNAL" $bat_color) 
       ;;
 		*)
 			echo "Nothing"
