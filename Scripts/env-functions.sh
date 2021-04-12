@@ -3,7 +3,7 @@
 generate_pango_output() {
 	echo \
 		"<span \
-			background='#ebdbb2' \
+			background='#282828' \
 			foreground='$3'> $1 \
 		</span> \
     <span \
