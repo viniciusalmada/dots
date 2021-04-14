@@ -122,13 +122,13 @@ generate_monitor() {
         SIGNAL="&#xf0e7;"
       fi
       BAT_ICON="&#xf244;"
-      if [[ $BAT -ge 00 && $BAT -lt 15 ]]; then
+			if (( `echo "$BAT >= 0.0 && $BAT < 15.0" | bc -l` )); then
         BAT_ICON="&#xf244;" # battery 0 to 15
-      elif [[ $BAT -ge 15 && $BAT -lt 25 ]]; then
+      elif (( `echo "$BAT >= 15.0 && $BAT < 25.0" | bc -l` )); then
         BAT_ICON="&#xf243;" # battery 15 to 25
-      elif [[ $BAT -ge 25 && $BAT -lt 50 ]]; then
+      elif (( `echo "$BAT >= 25.0 && $BAT < 50.0" | bc -l` )); then
         BAT_ICON="&#xf242;" # battery 25 to 50
-      elif [[ $BAT -ge 50 && $BAT -lt 75 ]]; then
+      elif (( `echo "$BAT >= 50.0 && $BAT < 75.0" | bc -l` )); then
         BAT_ICON="&#xf241;" # battery 50 to 75
       else
         BAT_ICON="&#xf240;" # battery 75 to 100
