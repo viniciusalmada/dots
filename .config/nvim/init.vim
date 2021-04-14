@@ -68,6 +68,9 @@ set shiftwidth=2
 set expandtab
 set smartindent
 
+set wrap
+set linebreak
+
 let g:lightline = { 'colorscheme': 'darcula' }
 
 " Set leader key to be space key
