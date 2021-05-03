@@ -89,6 +89,17 @@ nnoremap <c-f> :Ag<space>
 " Open defx
 nnoremap <leader>1 :Defx -columns=icons:indent:filename:type -split=vertical -winwidth=50 -direction=topleft<cr>
 
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
+nnoremap <Down> gj
+nnoremap <Up> gk
+vnoremap <Down> gj
+vnoremap <Up> gk
+inoremap <Down> <C-o>gj
+inoremap <Up> <C-o>gk
+
 " Disabled arrow keys
 "noremap <Up> <Nop>
 "noremap <Down> <Nop>
