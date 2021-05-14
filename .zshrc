@@ -14,7 +14,12 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Which plugins would you like to load?
-plugins=(git archlinux)
+plugins=(
+  git
+  archlinux
+  zsh-syntax-highlighting
+  zsh-autosuggestions
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -34,6 +39,7 @@ alias adog="git log --all --decorate --oneline --graph"
 alias tmp="cd /tmp"
 alias vim="nvim"
 alias v="nvim"
+alias sv="sudo nvim"
 alias pac="sudo pacman"
 alias lsp="stat -c '%a %n' *"
 alias lsh="stat -c '%a %n' .*"
@@ -45,12 +51,14 @@ alias sz="source ~/.zshrc"
 
 alias dots="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
+alias ls="colorls --sd -A"
+
 # Allow wildcard
 setopt nonomatch
 # Disable autocorrect
 unsetopt correct_all
 
-neofetch
+ufetch
 
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
   exec startx
