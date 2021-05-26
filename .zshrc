@@ -19,6 +19,10 @@ plugins=(
   archlinux
   zsh-syntax-highlighting
   zsh-autosuggestions
+  ssh-agent
+  colored-man-pages
+  command-not-found
+  dirhistory
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -62,13 +66,6 @@ ufetch
 
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
   exec startx
-fi
-
-if ! pgrep -u "$USER" ssh-agent > /dev/null; then
-    ssh-agent -t 8h > "$XDG_RUNTIME_DIR/ssh-agent.env"
-fi
-if [[ ! "$SSH_AUTH_SOCK" ]]; then
-    source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
 fi
 
 precmd() { pwd > /tmp/whereami }
