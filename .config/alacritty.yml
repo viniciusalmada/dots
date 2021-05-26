@@ -43,7 +43,7 @@ font: # nerd-fonts-jetbrains-mono
   bold:
     family: JetBrainsMono Nerd Font
 
-    style: Normal
+    style: Medium
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
