@@ -62,8 +62,6 @@ setopt nonomatch
 # Disable autocorrect
 unsetopt correct_all
 
-ufetch
-
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
   exec startx
 fi
