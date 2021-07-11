@@ -1,7 +1,8 @@
 # Configure keyboard
-exec_always "setxkbmap -model pc104 -layout br -variant thinkpad"
+#exec_always "setxkbmap -model pc104 -layout br -variant thinkpad"
 #exec_always "setxkbmap -layout br"
-exec_always "setxkbmap -option caps:escape"
+#exec_always "setxkbmap -option caps:escape"
+exec "setxkbmap -layout br"
 
 # Start greenclip daemon
 exec_always clip.sh
