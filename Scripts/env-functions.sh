@@ -19,7 +19,13 @@ get_local_ip() {
 }
 
 get_cpu_clock() {
-	CPU_CLOCK=`lscpu | grep "CPU MHz" | awk {'print $3'}`
+	CLOCKS="`/bin/cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_cur_freq`"
+	TOTAL=0;
+	for c in $CLOCKS; do
+  	TOTAL=`perl -E "say $TOTAL+$c"`
+	done
+
+	CPU_CLOCK=`perl -E "say $TOTAL/16/1000"`
 	echo $CPU_CLOCK
 }
 
@@ -83,7 +89,7 @@ generate_monitor() {
 			CPU_CLOCK=$(get_cpu_clock)
 			CPU_MAX_CLOCK=$(get_cpu_max_clock)
 			PERC_CLOCK=`perl -E "say 100*$CPU_CLOCK/$CPU_MAX_CLOCK"`
-			if [[ $PERC_CLOCK -ge 100 ]]; then
+			if [[ `perl -E "say $PERC_CLOCK >= 100"` ]]; then
 				PERC_CLOCK=0
 			fi
 			OUT=`echo $PERC_CLOCK $CPU_CLOCK | \
