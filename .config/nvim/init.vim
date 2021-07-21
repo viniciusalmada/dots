@@ -71,7 +71,7 @@ set smartindent
 set wrap
 set linebreak
 
-let g:lightline = { 'colorscheme': 'darcula' }
+let g:lightline = { 'colorscheme': 'gruvbox' }
 
 " Set leader key to be space key
 let mapleader="\<space>"
