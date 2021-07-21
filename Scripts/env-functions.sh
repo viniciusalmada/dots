@@ -21,11 +21,12 @@ get_local_ip() {
 get_cpu_clock() {
 	CLOCKS="`/bin/cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_cur_freq`"
 	TOTAL=0;
+	NUM_PROC=`nproc`
 	for c in $CLOCKS; do
   	TOTAL=`perl -E "say $TOTAL+$c"`
 	done
 
-	CPU_CLOCK=`perl -E "say $TOTAL/16/1000"`
+	CPU_CLOCK=`perl -E "say $TOTAL/$NUM_PROC/1000"`
 	echo $CPU_CLOCK
 }
 
