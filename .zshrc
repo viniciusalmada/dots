@@ -73,5 +73,3 @@ fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-cowsay <<<"You have to finish your thesis at 30 of june. Run with it!" | lolcat -F 1
