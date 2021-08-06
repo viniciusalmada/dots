@@ -74,12 +74,23 @@ is_battery_charging() {
 }
 
 generate_monitor() {
-	ip_color="#ff241d"
-	cpu_color="#98971a"
-	ram_color="#d79921"
-  stg_color="#458588"
-  date_color="#689d6a"
-  bat_color="#b16286"
+	
+	backg="#282828"
+	red="#cc241d"
+	green="#98971a"
+	yellow="#d79921"
+	blue="#458588"
+	purple="#b16286"
+	aqua="#689d68"
+	gray="#a89984"
+	darkgray="#1d2021"
+
+	ip_color=$red
+	cpu_color=$green
+	ram_color=$yellow
+  stg_color=$aqua
+  date_color=$purple
+  bat_color=$gray
 
 	case "$1" in
 		"IP")
