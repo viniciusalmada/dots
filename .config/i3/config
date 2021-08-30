@@ -119,6 +119,9 @@ gaps inner 16
 for_window [class="^.*"] border pixel 3
 #for_window [class="^jetbrains-.+" title="win.*"] border none
 for_window [class="Pavucontrol"] floating enable
+for_window [class="MainKt"] floating enable
+
+
 
 # focus the child container
 #bindsym $mod+d focus child
