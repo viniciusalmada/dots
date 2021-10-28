@@ -6,7 +6,7 @@
 
 source /usr/share/nvim/archlinux.vim
 
-call plug#begin()
+call plug#begin(stdpath('data') . '/plugged')
 Plug 'morhetz/gruvbox'
 
 " Use multiple cursors, select key word and Ctrl N. Press
