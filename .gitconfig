@@ -1,9 +1,8 @@
-[pull]
-	rebase = false
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 [user]
-	name = vinicius
 	email = viniciusalmada10@gmail.com
-[init]
-	defaultBranch = main
-[core]
-	autocrlf = input
+	name = Vinicius Almada
