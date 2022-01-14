@@ -63,10 +63,12 @@ set inccommand=split
 set noshowmode
 set laststatus=2
 
-set tabstop=2
-set shiftwidth=2
+set autoindent
 set expandtab
+set shiftwidth=2
 set smartindent
+set softtabstop=2
+set tabstop=2
 
 set wrap
 set linebreak
