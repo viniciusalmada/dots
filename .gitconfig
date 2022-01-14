@@ -6,3 +6,5 @@
 [user]
 	email = viniciusalmada10@gmail.com
 	name = Vinicius Almada
+[init]
+	defaultBranch = main
