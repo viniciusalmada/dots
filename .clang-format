@@ -1,0 +1,23 @@
+---
+BasedOnStyle: LLVM
+IndentWidth: 2
+---
+Language: Cpp
+UseTab: Never
+IndentWidth: 2
+TabWidth: 2
+BreakBeforeBraces: Allman
+AllowShortIfStatementsOnASingleLine: true
+IndentCaseLabels: false
+ColumnLimit: 80
+IncludeBlocks: Regroup
+IndentAccessModifiers: false
+ContinuationIndentWidth: 2
+AccessModifierOffset: -2
+NamespaceIndentation: All
+FixNamespaceComments: false
+Cpp11BracedListStyle: false
+PointerAlignment: Left
+Standard: c++14
+AlignOperands: Align
+...
